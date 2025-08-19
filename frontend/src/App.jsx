@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Component/Home/Navbar";
-import HOME from "./Component/Home/HOME.JSX";
+import HOME from "./Component/Home/Home.jsx";
 import Footer from "./Component/Home/Footer/Footer";
 
 // Aap additional pages bana sakte ho, jaise About.jsx, Contact.jsx
