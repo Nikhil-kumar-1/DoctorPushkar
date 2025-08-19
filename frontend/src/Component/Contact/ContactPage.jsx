@@ -164,7 +164,7 @@ const ContactPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-[#1A1F1C] mb-8">
+              <h2 className="text-3xl font-bold cursor-pointer text-[#1A1F1C] mb-8">
                 Send Us a <span className="text-[#6CCF5F]">Message</span>
               </h2>
 
