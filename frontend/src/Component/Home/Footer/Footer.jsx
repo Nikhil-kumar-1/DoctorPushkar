@@ -18,7 +18,7 @@ export default function Footer() {
     "About",
     "Services",
     "Blog",
-    "Achievement",
+    "Achievements",
     "Contact",
   ];
 

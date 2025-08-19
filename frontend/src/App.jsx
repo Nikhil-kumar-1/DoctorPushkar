@@ -9,6 +9,7 @@ import HeroSection from "./Component/Home/Hero";
 import AboutPage from "./Component/About/AboutPage";
 import ServicePage from "./Component/Services/ServicePage";
 import ContactPage from "./Component/Contact/ContactPage";
+import AchievementPage from "./Component/Achievement/Achievement.jsx";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/hero" element={<HeroSection />} />
         <Route path="/about" element={<AboutPage />} />
         {/* Future me yaha aur routes add kar sakte ho */}
+        <Route path="/achievements" element={<AchievementPage/>} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/contact" element={<ContactPage/>} />
         {/* Default route */}
