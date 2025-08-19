@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MotionLink = motion(Link);
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   // Scroll effect
   useEffect(() => {
@@ -50,24 +51,92 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 items-center">
-          {["Home", "About", "Services","Achievements", "Blogs", "Contact",].map((item) => (
-            <MotionLink
-              key={item}
-              to={`/${item.toLowerCase()}`}
-              className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
-              whileHover={{ scale: 1.05 }}
-            >
-              {item}
-              <motion.span
-                className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
-                initial={{ width: 0 }}
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              />
-            </MotionLink>
-          ))}
+          <MotionLink
+            to="/"
+            className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
+            whileHover={{ scale: 1.05 }}
+          >
+            Home
+            <motion.span
+              className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </MotionLink>
+          
+          <MotionLink
+            to="/about"
+            className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
+            whileHover={{ scale: 1.05 }}
+          >
+            About
+            <motion.span
+              className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </MotionLink>
+          
+          <MotionLink
+            to="/services"
+            className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
+            whileHover={{ scale: 1.05 }}
+          >
+            Services
+            <motion.span
+              className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </MotionLink>
+          
+          <MotionLink
+            to="/achievements"
+            className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
+            whileHover={{ scale: 1.05 }}
+          >
+            Achievements
+            <motion.span
+              className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </MotionLink>
+          
+          <MotionLink
+            to="/blogs"
+            className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
+            whileHover={{ scale: 1.05 }}
+          >
+            Blogs
+            <motion.span
+              className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </MotionLink>
+          
+          <MotionLink
+            to="/contact"
+            className="relative px-3 py-2 text-[#1A1F1C] hover:text-[#6CCF5F] transition-colors font-medium"
+            whileHover={{ scale: 1.05 }}
+          >
+            Contact
+            <motion.span
+              className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#6CCF5F]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.3 }}
+            />
+          </MotionLink>
+          
           <motion.button
-          onClick={() => navigate('/contact')}
+            onClick={() => navigate('/contact')}
             className="bg-[#1A1F1C] cursor-pointer text-white px-6 py-2 rounded-full hover:bg-[#6CCF5F] transition-all font-medium shadow-md"
             whileHover={{
               scale: 1.05,
@@ -104,20 +173,77 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
           >
             <div className="px-6 py-4 space-y-4 flex flex-col">
-              {["Home", "About", "Services", "Contact"].map((item) => (
-                <MotionLink
-                  key={item}
-                  to={`/${item.toLowerCase()}`}
-                  className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
-                  onClick={handleNavClick}
-                  initial={{ x: 20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {item}
-                </MotionLink>
-              ))}
+              <MotionLink
+                to="/"
+                className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                onClick={handleNavClick}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                Home
+              </MotionLink>
+              
+              <MotionLink
+                to="/about"
+                className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                onClick={handleNavClick}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                About
+              </MotionLink>
+              
+              <MotionLink
+                to="/services"
+                className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                onClick={handleNavClick}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                Services
+              </MotionLink>
+              
+              <MotionLink
+                to="/achievements"
+                className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                onClick={handleNavClick}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                Achievements
+              </MotionLink>
+              
+              <MotionLink
+                to="/blogs"
+                className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                onClick={handleNavClick}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                Blogs
+              </MotionLink>
+              
+              <MotionLink
+                to="/contact"
+                className="block py-3 px-4 text-[#1A1F1C] hover:text-[#6CCF5F] hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                onClick={handleNavClick}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                Contact
+              </MotionLink>
+              
               <motion.button
+                onClick={() => {
+                  navigate('/contact');
+                  handleNavClick();
+                }}
                 className="bg-[#1A1F1C] text-white px-5 py-3 rounded-full hover:bg-[#6CCF5F] transition mt-2 font-medium"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

@@ -100,7 +100,7 @@ export default function Hero() {
               onClick={() => navigate('/contact')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#1A1F1C] text-white px-8 py-3 rounded-full hover:bg-[#333] transition shadow-lg text-lg font-medium"
+              className="bg-[#1A1F1C] cursor-pointer text-white px-8 py-3 rounded-full hover:bg-[#333] transition shadow-lg text-lg font-medium"
             >
               Book Appointment
             </motion.button>

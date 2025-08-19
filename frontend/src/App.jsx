@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<HOME />} />
+        <Route path="/" element={<HOME />} />
         <Route path="/hero" element={<HeroSection />} />
         <Route path="/about" element={<AboutPage />} />
         {/* Future me yaha aur routes add kar sakte ho */}
