@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import DocAbout from "../../assets/Doctor.webp";
+import Profile from "../../assets/Profile.webp";
+import { useNavigate } from "react-router-dom";
+
+
 export default function About() {
   const [isMounted, setIsMounted] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsMounted(true);
@@ -42,7 +46,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-[#6CCF5F] to-[#1A1F1C] p-1 rounded-2xl shadow-xl">
               <div className="bg-white p-2 rounded-xl overflow-hidden">
                 <img
-                  src={DocAbout}
+                  src={Profile}
                   alt="Dr. Pushkar Anand Singh"
                   className="w-full h-150 rounded-lg object-cover"
                 />
@@ -102,17 +106,17 @@ export default function About() {
               variants={item}
               className="flex flex-wrap gap-4"
             >
-              <motion.button
+              <motion.button onClick={() => navigate('/about')}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-[#6CCF5F] text-white px-6 py-3 rounded-full hover:bg-[#5bbd4f] transition shadow-md"
+                className="bg-[#6CCF5F] cursor-pointer text-white px-6 py-3 rounded-full hover:bg-[#5bbd4f] transition shadow-md"
               >
                 View Full Profile
               </motion.button>
-              <motion.button
+              <motion.button onClick={() => navigate('/contact')}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="border-2 border-[#1A1F1C] text-[#1A1F1C] px-6 py-3 rounded-full hover:bg-gray-100 transition"
+                className="border-2 cursor-pointer border-[#1A1F1C] text-[#1A1F1C] px-6 py-3 rounded-full hover:bg-gray-100 transition"
               >
                 Book Consultation
               </motion.button>

@@ -1,7 +1,9 @@
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-
+import { useNavigate } from 'react-router-dom';
 const ServicePage = () => {
+
+  const navigate = useNavigate();
   const service = [
     {
       title: "Laparoscopic Surgery for Gall Bladder Stone",
@@ -188,19 +190,19 @@ const ServicePage = () => {
               Minimally invasive laparoscopic and laser procedures for faster recovery and better outcomes
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button onClick={()=> navigate('/contact')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#6CCF5F] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-[#5bbd4f] transition"
+                className="bg-[#6CCF5F] cursor-pointer text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-[#5bbd4f] transition"
               >
                 Book Consultation
               </motion.button>
-              <motion.button
+              <motion.button onClick={()=> navigate('/about')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+                className="border-2 cursor-pointer border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition"
               >
-                View All Services
+                About Us
               </motion.button>
             </div>
           </motion.div>
@@ -297,12 +299,12 @@ const ServicePage = () => {
                     </ul>
                   </div>
 
-                  <button className="text-[#6CCF5F] font-medium hover:text-[#5bbd4f] transition flex items-center">
+                  {/* <button className="text-[#6CCF5F] font-medium hover:text-[#5bbd4f] transition flex items-center">
                     Learn More
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
-                  </button>
+                  </button> */}
                 </div>
               
               </motion.div>
@@ -322,20 +324,22 @@ const ServicePage = () => {
               Schedule a consultation to discuss the best treatment options for your condition
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button onClick={()=>navigate('/contact')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-[#1A1F1C] px-8 py-3 rounded-full font-semibold"
+                className="bg-white cursor-pointer text-[#1A1F1C] px-8 py-3 rounded-full font-semibold"
               >
                 Book an Appointment
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold"
-              >
-                Call: +91 98765 43210
-              </motion.button>
+  whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.location.href = "tel:+919876543210"}
+  className="border-2 cursor-pointer border-white text-white px-8 py-3 rounded-full font-semibold"
+>
+  Call: +91 98765 43210
+</motion.button>
+
             </div>
           </motion.div>
         </div>

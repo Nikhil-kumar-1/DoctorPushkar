@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { FaAward, FaUserMd, FaCalendarAlt, FaNewspaper } from 'react-icons/fa';
-
+import { useNavigate } from 'react-router-dom';
 const AchievementPage = () => {
+    const navigate = useNavigate()
   const achievements = [
     {
       title: "Pioneer in Painless Piles Treatment",
@@ -97,6 +98,24 @@ const AchievementPage = () => {
               Celebrating milestones in surgical innovation and patient care advocacy
             </p>
           </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <motion.button onClick={()=> navigate('/services')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#6CCF5F] cursor-pointer text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-[#5bbd4f] transition"
+              >
+                Services
+              </motion.button>
+              <motion.button onClick={()=> navigate('/about')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 cursor-pointer border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+              >
+                About Us
+              </motion.button>
+            </div>
+          
         </div>
       </section>
 
@@ -230,8 +249,19 @@ const AchievementPage = () => {
                 </motion.div>
               ))}
             </div>
+            
           </motion.div>
+
+          
         </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <motion.button onClick={()=> navigate('/contact')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#6CCF5F] cursor-pointer text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-[#5bbd4f] transition"
+              >
+                Book Consultation
+              </motion.button></div>
       </section>
     </>
   );

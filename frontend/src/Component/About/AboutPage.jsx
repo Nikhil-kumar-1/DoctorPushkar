@@ -107,17 +107,17 @@ const AboutPage = () => {
               Renowned laparoscopic and laser surgery specialist with over two decades of surgical excellence
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button onClick={() => navigate('/contact')}
                 whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(108, 207, 95, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#6CCF5F] text-white px-8 py-4 rounded-full text-lg font-semibold"
+                className="bg-[#6CCF5F] cursor-pointer text-white px-8 py-4 rounded-full text-lg font-semibold"
               >
                 Book Consultation
               </motion.button>
-              <motion.button
+              <motion.button onClick={() => navigate('/services')}
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold"
+                className="border-2 cursor-pointer border-white text-white px-8 py-4 rounded-full text-lg font-semibold"
               >
                 View Services
               </motion.button>
@@ -176,7 +176,12 @@ const AboutPage = () => {
               <p className="text-lg text-gray-600 mb-6">
                 Dr. Pushkar Anand Singh is a distinguished surgical specialist with extensive expertise in minimally invasive procedures. With qualifications including MBBS, DNB in General Surgery, FMAS, and FIAGES, Dr. Singh combines academic excellence with specialized training to deliver the highest standard of healthcare.
               </p>
-              <motion.button
+              <motion.button onClick={() => {
+    const element = document.getElementById("biography");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="bg-[#6CCF5F] text-white px-8 py-3 rounded-full font-semibold shadow-md hover:bg-[#5bbd4f] transition"
@@ -230,7 +235,7 @@ const AboutPage = () => {
           </motion.div>
 
           {/* Biography Section */}
-          <div className="grid md:grid-cols-3 gap-12 mb-20">
+          <div id='biography' className="grid md:grid-cols-3 gap-12 mb-20">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

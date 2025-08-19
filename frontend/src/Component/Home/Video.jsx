@@ -8,11 +8,11 @@ export default function HeroVideo() {
 
   // Array of YouTube video IDs
   const youtubeVideos = [
-    "-2RJTVPSOPc", // Video 1
-    "dQw4w9WgXcQ", // Video 2
-    "9bZkp7q19f0", // Video 3
-    "JGwWNGJdvx8", // Video 4
-    "kJQP7kiw5Fk"  // Video 5
+    "h7oIoKll7Y", // Video 1
+    "ZP9Zheo7CGY", // Video 2
+    "qMyX1RxWPEk", // Video 3
+    "GyXtEkaFrc0", // Video 4
+    "eEVDuo_TH3I", // Video 5
   ];
 
   // Handle video toggle

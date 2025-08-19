@@ -67,6 +67,23 @@ const ContactPage = () => {
               Get in touch to schedule your consultation or ask any questions
               about our services
             </p>
+
+              <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <motion.button onClick={() => navigate('/contact')}
+                whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(108, 207, 95, 0.5)" }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#6CCF5F] cursor-pointer text-white px-5 py-2 rounded-full text-lg font-semibold"
+              >
+                Book Consultation
+              </motion.button>
+              <motion.button onClick={() => navigate('/services')}
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 cursor-pointer border-white text-white px-5 py-2 rounded-full text-lg font-semibold"
+              >
+                View Services
+              </motion.button>
+            </div>
           </motion.div>
         </div>
       </motion.section>
@@ -284,7 +301,8 @@ const ContactPage = () => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="border-2 border-[#1A1F1C] text-[#1A1F1C] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+                onClick={() => window.location.href = "tel:+919876543210"}
+                className="border-2 cursor-pointer border-[#1A1F1C] text-[#1A1F1C] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
               >
                 Call: +91 92051 11477
               </motion.button>
