@@ -4,6 +4,7 @@ import About from './About'
 import Services from './Service'
 import Video from './Video'
 import GetInTouch from '../GetInTouch'
+import Article from './Article'
 
 
 const HOME = () => {
@@ -13,6 +14,7 @@ const HOME = () => {
   <Video />
   <About />
   <Services />
+  <Article />
   <GetInTouch />
      
     </div>

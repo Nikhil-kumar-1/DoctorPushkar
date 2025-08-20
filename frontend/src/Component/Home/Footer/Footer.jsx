@@ -50,7 +50,7 @@ export default function Footer() {
               Dr. <span className="text-[#6CCF5F]">Pushkar</span> Clinic
             </h3>
             <p className="text-gray-300">
-              Advanced laparoscopic and laser surgical care with 20+ years of
+              Advanced laparoscopic and laser surgical care with 14+ years of
               expertise.
             </p>
             <div className="flex items-center space-x-4 pt-2">

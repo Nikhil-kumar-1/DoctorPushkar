@@ -10,10 +10,12 @@ import AboutPage from "./Component/About/AboutPage";
 import ServicePage from "./Component/Services/ServicePage";
 import ContactPage from "./Component/Contact/ContactPage";
 import AchievementPage from "./Component/Achievement/Achievement.jsx";
+import ScrollToTop from "./Component/ScrollToTop.jsx";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HOME />} />

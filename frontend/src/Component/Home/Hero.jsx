@@ -28,14 +28,14 @@ export default function Hero() {
 
   const phone = {
     hidden: { opacity: 0, scale: 0.8 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       scale: 1,
-      transition: { 
+      transition: {
         duration: 0.8,
         type: "spring",
-        bounce: 0.4
-      } 
+        bounce: 0.4,
+      },
     },
   };
 
@@ -69,10 +69,7 @@ export default function Hero() {
             Dr. Pushkar Anand Singh
           </motion.h1>
 
-          <motion.div
-            variants={item}
-            className="mb-6"
-          >
+          <motion.div variants={item} className="mb-6">
             <p className="text-xl md:text-2xl text-[#6CCF5F] font-medium">
               MBBS, DNB (General Surgery)
             </p>
@@ -88,8 +85,9 @@ export default function Hero() {
             variants={item}
             className="mt-4 text-gray-600 max-w-lg text-lg leading-relaxed"
           >
-            Renowned surgical specialist with expertise in minimally invasive procedures. 
-            Providing compassionate care and cutting-edge surgical solutions for optimal patient outcomes.
+            Renowned surgical specialist with expertise in minimally invasive
+            procedures. Providing compassionate care and cutting-edge surgical
+            solutions for optimal patient outcomes.
           </motion.p>
 
           <motion.div
@@ -97,7 +95,7 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-6 mt-8"
           >
             <motion.button
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate("/contact")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#1A1F1C] cursor-pointer text-white px-8 py-3 rounded-full hover:bg-[#333] transition shadow-lg text-lg font-medium"
@@ -108,7 +106,7 @@ export default function Hero() {
               <span className="text-[#6CCF5F] text-2xl">★</span>
               <div>
                 <p className="font-medium">Trusted by 10,000+ Patients</p>
-                <p className="text-sm">20+ Years of Experience</p>
+                <p className="text-sm">14+ Years of Experience</p>
               </div>
             </div>
           </motion.div>
@@ -140,42 +138,13 @@ export default function Hero() {
             <div className="w-[350px] h-[450px] bg-white rounded-[2.5rem] shadow-2xl relative overflow-hidden border-8 border-white">
               {/* Screen bezel */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-white rounded-b-lg z-20"></div>
-              
+
               {/* Doctor Image */}
               <img
                 src={DocImg}
                 alt="Dr. Pushkar Anand Singh"
                 className="w-full h-full object-cover"
               />
-
-              {/* Specialization Badge */}
-              <motion.div
-                custom={0.5}
-                variants={floatingElements}
-                animate={isMounted ? "show" : "hidden"}
-                className="absolute top-8 right-4 bg-[#6CCF5F] text-white p-3 rounded-xl shadow-lg w-32"
-              >
-                <p className="text-xs font-medium">Specialization</p>
-                <p className="text-lg font-bold">Laparoscopic</p>
-              </motion.div>
-
-              {/* Doctor Card */}
-              <motion.div
-                custom={0.8}
-                variants={floatingElements}
-                animate={isMounted ? "show" : "hidden"}
-                className="absolute bottom-20 left-4 bg-white p-4 rounded-xl shadow-lg w-48"
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 rounded-full bg-[#6CCF5F] flex items-center justify-center text-white font-bold">
-                    PAS
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold">Dr. Pushkar A. Singh</p>
-                    <p className="text-xs text-gray-500">Surgeon</p>
-                  </div>
-                </div>
-              </motion.div>
 
               {/* Experience Badge */}
               <motion.div
@@ -185,7 +154,7 @@ export default function Hero() {
                 className="absolute bottom-6 right-4 bg-white p-3 rounded-xl shadow-lg w-36"
               >
                 <p className="text-xs text-gray-500">Experience</p>
-                <p className="text-lg font-bold text-[#1A1F1C]">20+ Years</p>
+                <p className="text-lg font-bold text-[#1A1F1C]">14+ Years</p>
               </motion.div>
             </div>
           </div>
@@ -193,7 +162,7 @@ export default function Hero() {
       </div>
 
       {/* Floating animated elements in background */}
-      <motion.div 
+      <motion.div
         animate={{
           x: [0, 100, 0],
           y: [0, -50, 0],
@@ -206,7 +175,7 @@ export default function Hero() {
         }}
         className="absolute top-1/4 left-10 w-16 h-16 rounded-full bg-[#6CCF5F] opacity-10 -z-10"
       />
-      <motion.div 
+      <motion.div
         animate={{
           x: [0, -80, 0],
           y: [0, 60, 0],
